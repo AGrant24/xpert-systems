@@ -18,13 +18,21 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="client-container">
-                <div class="client-search">
-                    <div class="row height d-flex justify-content-center align-items-center">
-                        <div class="col-md-8">
-                            <div class="form"><i class="fa fa-search"></i><input type="text" class="form-control form-input" placeholder="Search for client"> <span class="left-pan"></span></div>
+
+                {{-- Top section --}}
+                <div id="top-section">
+                    <div class="client-search">
+                        <div class="row height d-flex justify-content-left align-items-left">
+                            <div class="col-md-8">
+                                <div class="form"><i class="fa fa-search"></i><input type="text" class="form-control form-input" placeholder="Search for client"> <span class="left-pan"></span></div>
+                            </div>
                         </div>
                     </div>
+                            <div id="add-button">
+                                <button type="button" class="btn btn-light">Add Client</button>
+                            </div>
                 </div>
+                {{-- Client Table --}}
                 <table class="table align-middle table-borderless" id="clients-table">
                 <thead>
                     <tr class="client-header align-middle">
@@ -41,24 +49,21 @@
                     <td>Mark Johnson</td>
                     <td>CBT</td>
                     <td>In Treatment</td>
-                    <td class="text-center"><button type="button" class="btn btn-warning">Edit</button>
-                        <button type="button" class="btn btn-primary">View</button></td>
+                    <td class="text-center"><button type="button" class="btn btn-light"><i class="fas fa-external-link-alt" id="view-button"></i></button>
                     </tr>
                     <tr class="client-row">
                     <th scope="row" class="client-spacing">123546</th>
                     <td>Mark Johnson</td>
                     <td>Counselling</td>
                     <td>New</td>
-                    <td class="text-center"><button type="button" class="btn btn-warning">Edit</button>
-                        <button type="button" class="btn btn-primary">View</button></td>
+                    <td class="text-center"><button type="button" class="btn btn-light"><i class="fas fa-external-link-alt" id="view-button"></i></button>
                     </tr>
                     <tr class="client-row">
                     <th scope="row" class="client-spacing">123546</th>
                     <td>Mark Johnson</td>
                     <td>EMDR</td>
                     <td>Discharged</td>
-                    <td class="text-center"><button type="button" class="btn btn-warning">Edit</button>
-                        <button type="button" class="btn btn-primary">View</button></td>
+                    <td class="text-center"><button type="button" class="btn btn-light"><i class="fas fa-external-link-alt" id="view-button"></i></button>
                     </tr>
                     
                 </tbody>

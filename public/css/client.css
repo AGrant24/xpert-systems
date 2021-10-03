@@ -1,9 +1,27 @@
+/** Top Section */
+#top-section{
+    display: flex;
+    width: 100%;
+}
+
+#add-button{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    overflow: auto;
+    width: 150px;
+    height: 60px;
+}
+
+#add-button button{
+    font-size: 0.8rem !important;
+}
+
 /** Search */
 .client-search{
     padding-left: 15px;
-    padding-right: 15px;
     padding-bottom: 15px;
-    
+    width: 100%;
 }
 
 .form {
@@ -61,6 +79,10 @@
 #clients-table td {
 width: 20%;
 }
+
+#clients-table #view-button {
+    color: blue;
+    }
 
 .client-header{
     font-size: 0.7rem !important;

@@ -7,7 +7,7 @@
                 <div class="flex-shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
                         {{-- <x-jet-application-mark class="block h-9 w-auto" /> --}}
-                        <img class="block h-9 w-auto" src="{{ asset('img/logo.png') }}" alt="" height="10">
+                        <img class="block h-9 w-auto" src="{{ asset('img/logo.png') }}" alt="">
                     </a>
                 </div>
 
@@ -15,6 +15,9 @@
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
+                    </x-jet-nav-link>
+                    <x-jet-nav-link href="{{ route('dashboard') }}">
+                        {{ __('Appointments') }}
                     </x-jet-nav-link>
                 </div>
             </div>
@@ -71,6 +74,7 @@
                 @endif
 
                 <!-- Settings Dropdown -->
+                
                 <div class="ml-3 relative">
                     <x-jet-dropdown align="right" width="48">
                         <x-slot name="trigger">
@@ -90,7 +94,7 @@
                                 </span>
                             @endif
                         </x-slot>
-
+                    
                         <x-slot name="content">
                             <!-- Account Management -->
                             <div class="block px-4 py-2 text-xs text-gray-400">
@@ -98,7 +102,7 @@
                             </div>
 
                             <x-jet-dropdown-link href="{{ route('profile.show') }}">
-                                {{ __('Profile') }}
+                                {{ __('Account Settings') }}
                             </x-jet-dropdown-link>
 
                             @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
