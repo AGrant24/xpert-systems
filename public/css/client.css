@@ -1,0 +1,102 @@
+/** Search */
+.client-search{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    
+}
+
+.form {
+    position: relative
+}
+
+.form .fa-search {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #9ca3af
+}
+
+.form span {
+    position: absolute;
+    right: 17px;
+    top: 13px;
+    padding: 2px;
+    border-left: 1px solid #d1d5db
+}
+
+.left-pan {
+    padding-left: 7px
+}
+
+.left-pan i {
+    padding-left: 10px
+}
+
+.form-input {
+    height: 55px;
+    text-indent: 33px;
+    border-radius: 10px
+}
+
+.form-input:focus {
+    box-shadow: none;
+    border: none
+}
+
+/* Shaping the table */
+.client-container{
+    background: rgb(255, 255, 255);
+    padding-top: 15px;
+    border-radius: 10px;
+    font-size: 0.8rem !important;
+    box-shadow: 2px 2px 8px #c0c0c08c;
+   
+}
+
+#clients-table {
+    border-radius: 15px;
+}
+
+#clients-table td {
+width: 20%;
+}
+
+.client-header{
+    font-size: 0.7rem !important;
+    background-color: rgb(248, 248, 248);
+    height: 3rem;
+}
+
+.client-row{
+    height: 4rem;
+}
+
+.client-spacing{
+    padding-left: 15px !important;
+}
+
+/* Borders */
+#clients-table thead > tr > td {  
+    border-top: 1px solid rgb(231, 231, 231); 
+    border-bottom: 1px solid rgb(231, 231, 231); 
+  }
+
+#clients-table thead > tr > th {  
+    border-top: 1px solid rgb(231, 231, 231); 
+    border-bottom: 1px solid rgb(231, 231, 231); 
+  }
+
+#clients-table tbody > tr > td {  
+    border-bottom: 1px solid rgb(231, 231, 231); 
+  }
+
+#clients-table tbody > tr > th {  
+    border-bottom: 1px solid rgb(231, 231, 231); 
+  }
+
+
+/** Footer */
+  #clients-table tfoot > tr > td{
+      padding-right: 15px;
+  }

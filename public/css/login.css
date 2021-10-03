@@ -28,7 +28,12 @@ body {
     -ms-animation: fadein 2s; /* Internet Explorer */
     -o-animation: fadein 2s; /* Opera < 12.1 */
     animation: fadein 2s;
-  
+    
+  transition: filter 0.3s ease-in-out;
+}
+
+#login-container:hover{
+  filter: drop-shadow(0 0 0.75rem rgba(51, 51, 51, 0.171));
 }
 
 @keyframes fadein {
