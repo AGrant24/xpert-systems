@@ -84,6 +84,12 @@
             </div>
         </div>
     </div>
-{{-- End Patient List --}}
+{{-- End Client List --}}
+
+{{-- Example list --}}
+
+
+
+{{-- Example list End --}}
 
 </x-app-layout>
