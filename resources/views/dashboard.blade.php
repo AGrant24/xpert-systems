@@ -50,6 +50,14 @@
                             <div class="modal-body">
                                 <form class="row g-3">
                                     <div class="col-md-6">
+                                      <label for="inputName4" class="form-label">Name</label>
+                                      <input type="text" class="form-control" id="inputName4">
+                                    </div>
+                                    <div class="col-md-6">
+                                      <label for="inputdob4" class="form-label">Date of birth</label>
+                                      <input type="date" class="form-control" id="inputDob4">
+                                    </div>
+                                    <div class="col-md-6">
                                       <label for="inputEmail4" class="form-label">Email</label>
                                       <input type="email" class="form-control" id="inputEmail4">
                                     </div>
@@ -57,42 +65,47 @@
                                       <label for="inputPassword4" class="form-label">Contact Number</label>
                                       <input type="text" class="form-control" id="inputPassword4">
                                     </div>
-                                    <div class="col-12">
-                                      <label for="inputAddress" class="form-label">Address</label>
-                                      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                                    <div class="col-8">
+                                      <label for="inputAddress" class="form-label">First Line of Address</label>
+                                      <input type="text" class="form-control" id="inputAddress" placeholder="">
                                     </div>
-                                    <div class="col-12">
-                                      <label for="inputAddress2" class="form-label">Address 2</label>
-                                      <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                                    <div class="col-4">
+                                      <label for="inputAddress2" class="form-label">Post Code</label>
+                                      <input type="text" class="form-control" id="inputAddress2" placeholder="">
                                     </div>
+                                    
+                                    
+                                    
                                     <div class="col-md-6">
-                                      <label for="inputCity" class="form-label">City</label>
-                                      <input type="text" class="form-control" id="inputCity">
-                                    </div>
-                                    <div class="col-md-4">
-                                      <label for="inputState" class="form-label">State</label>
-                                      <select id="inputState" class="form-select">
-                                        <option selected>Choose...</option>
-                                        <option>...</option>
-                                      </select>
-                                    </div>
-                                    <div class="col-md-2">
-                                      <label for="inputZip" class="form-label">Zip</label>
-                                      <input type="text" class="form-control" id="inputZip">
-                                    </div>
-                                    <div class="col-12">
-                                      <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="gridCheck">
-                                        <label class="form-check-label" for="gridCheck">
-                                          Check me out
-                                        </label>
+                                        <label for="inputState" class="form-label">Service</label>
+                                        <select id="inputState" class="form-select">
+                                          <option selected>Choose...</option>
+                                          <option>CBT</option>
+                                          <option>Counselling</option>
+                                          <option>EMDR</option>
+                                          <option>Consultation</option>
+                                          <option>Supervision</option>
+                                          <option>Tutoring</option>
+                                          <option>Crisis</option>
+                                        </select>
                                       </div>
-                                    </div>
+
+                                      <div class="col-md-6">
+                                        <label for="inputState" class="form-label">Risk</label>
+                                        <select id="inputState" class="form-select">
+                                          <option selected>None</option>
+                                          <option>Low</option>
+                                          <option>Medium</option>
+                                          <option>High</option>
+                                          <option>Crisis</option>
+                                        </select>
+                                      </div>
+
                                   </form>
                             </div>
                             <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                            <button type="button" class="btn btn-primary">Add Client</button>
+                            <button type="button" class="btn btn-outline-primary">Add Client</button>
                             </div>
                         </div>
                         </div>
@@ -102,13 +115,15 @@
                             
                 </div>
                 {{-- end Top section --}}
+
                 {{-- Alert Section --}}
-                    @if(session('success'))
+                {{-- uncomment the if statement once back end ready to link --}}
+                    {{-- @if(session('success')) --}}
                         <div class="alert alert-success alert-dismissible fade show" role="alert">
-                            <strong>Client Added Successsfully</strong>{{ session('success') }}
+                            <strong>Client Added Successsfully</strong> - Click <a href="{{ route('dashboard') }}" >here</a> to view{{ session('success') }}
                                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         </div>
-                        @endif
+                        {{-- @endif --}}
                 {{-- Alert Section end--}}
 
                 {{-- Client Table --}}
