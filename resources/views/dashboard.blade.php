@@ -48,37 +48,53 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <form class="row g-3">
+                                {{-- New Client post --}}
+
+                                <form class="row g-3" action="{{ route('store.client') }}" method="POST">
+                                    @csrf
+                                    {{-- Name --}}
                                     <div class="col-md-6">
                                       <label for="inputName4" class="form-label">Name</label>
-                                      <input type="text" class="form-control" id="inputName4">
+                                      <input type="text" class="form-control" name="client_name" id="inputName4">
                                     </div>
+                                    @error('client_name')
+                                    <span class="text-danger">{{ $message }}</span>
+                                    @enderror
+                                    {{-- Date of birth --}}
                                     <div class="col-md-6">
                                       <label for="inputdob4" class="form-label">Date of birth</label>
-                                      <input type="date" class="form-control" id="inputDob4">
+                                      <input type="date" class="form-control" name="date_of_birth" id="inputDob4">
                                     </div>
                                     <div class="col-md-6">
+                                        {{-- @error('date_of_birth')
+                                        <span class="text-danger">{{ $message }}</span>
+                                        @enderror --}}
+                                        {{-- email --}}
                                       <label for="inputEmail4" class="form-label">Email</label>
-                                      <input type="email" class="form-control" id="inputEmail4">
+                                      <input type="email" class="form-control" name="email" id="inputEmail4">
                                     </div>
+                                    @error('email')
+                                        <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                        {{-- Contact number --}}
                                     <div class="col-md-6">
-                                      <label for="inputPassword4" class="form-label">Contact Number</label>
-                                      <input type="text" class="form-control" id="inputPassword4">
+                                      <label for="inputContact4" class="form-label">Contact Number</label>
+                                      <input type="text" class="form-control" name="contact_number" id="inputContact4">
                                     </div>
+                                    {{-- Address --}}
                                     <div class="col-8">
                                       <label for="inputAddress" class="form-label">First Line of Address</label>
-                                      <input type="text" class="form-control" id="inputAddress" placeholder="">
+                                      <input type="text" class="form-control" name="address" id="inputAddress" placeholder="">
                                     </div>
+                                    {{-- Post code --}}
                                     <div class="col-4">
-                                      <label for="inputAddress2" class="form-label">Post Code</label>
-                                      <input type="text" class="form-control" id="inputAddress2" placeholder="">
+                                      <label for="inputPost" class="form-label">Post Code</label>
+                                      <input type="text" class="form-control" name="post_code" id="inputPost" placeholder="">
                                     </div>
-                                    
-                                    
-                                    
+                                    {{-- Service --}}
                                     <div class="col-md-6">
-                                        <label for="inputState" class="form-label">Service</label>
-                                        <select id="inputState" class="form-select">
+                                        <label for="inputService" class="form-label">Service</label>
+                                        <select id="inputService" class="form-select" name="service">
                                           <option selected>Choose...</option>
                                           <option>CBT</option>
                                           <option>Counselling</option>
@@ -88,11 +104,10 @@
                                           <option>Tutoring</option>
                                           <option>Crisis</option>
                                         </select>
-                                      </div>
-
+                                      </div>{{-- Risk status --}}
                                       <div class="col-md-6">
-                                        <label for="inputState" class="form-label">Risk</label>
-                                        <select id="inputState" class="form-select">
+                                        <label for="inputRisk" class="form-label">Risk</label>
+                                        <select id="inputRisk" class="form-select" name="risk_status">
                                           <option selected>None</option>
                                           <option>Low</option>
                                           <option>Medium</option>
@@ -100,13 +115,13 @@
                                           <option>Crisis</option>
                                         </select>
                                       </div>
-
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                        <button type="submit" class="btn btn-outline-primary">Add Client</button>
+                                        </div>
                                   </form>
                             </div>
-                            <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                            <button type="button" class="btn btn-outline-primary">Add Client</button>
-                            </div>
+                            
                         </div>
                         </div>
                     </div>
@@ -118,12 +133,12 @@
 
                 {{-- Alert Section --}}
                 {{-- uncomment the if statement once back end ready to link --}}
-                    {{-- @if(session('success')) --}}
+                    @if(session('success'))
                         <div class="alert alert-success alert-dismissible fade show" role="alert">
-                            <strong>Client Added Successsfully</strong> - Click <a href="{{ route('dashboard') }}" >here</a> to view{{ session('success') }}
+                            <strong>{{ session('success') }}</strong> - Click here to view
                                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         </div>
-                        {{-- @endif --}}
+                        @endif
                 {{-- Alert Section end--}}
 
                 {{-- Client Table --}}
