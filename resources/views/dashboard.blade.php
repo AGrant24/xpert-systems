@@ -55,27 +55,24 @@
                                     {{-- Name --}}
                                     <div class="col-md-6">
                                       <label for="inputName4" class="form-label">Name</label>
-                                      <input type="text" class="form-control" name="client_name" id="inputName4">
+                                      <input type="text" class="form-control" name="client_name" id="inputName4" required>
                                     </div>
-                                    @error('client_name')
+                                    {{-- @error('client_name')
                                     <span class="text-danger">{{ $message }}</span>
-                                    @enderror
+                                    @enderror --}}
                                     {{-- Date of birth --}}
                                     <div class="col-md-6">
                                       <label for="inputdob4" class="form-label">Date of birth</label>
                                       <input type="date" class="form-control" name="date_of_birth" id="inputDob4">
                                     </div>
                                     <div class="col-md-6">
-                                        {{-- @error('date_of_birth')
-                                        <span class="text-danger">{{ $message }}</span>
-                                        @enderror --}}
                                         {{-- email --}}
                                       <label for="inputEmail4" class="form-label">Email</label>
                                       <input type="email" class="form-control" name="email" id="inputEmail4">
                                     </div>
-                                    @error('email')
+                                    {{-- @error('email')
                                         <span class="text-danger">{{ $message }}</span>
-                                        @enderror
+                                        @enderror --}}
                                         {{-- Contact number --}}
                                     <div class="col-md-6">
                                       <label for="inputContact4" class="form-label">Contact Number</label>
@@ -104,7 +101,8 @@
                                           <option>Tutoring</option>
                                           <option>Crisis</option>
                                         </select>
-                                      </div>{{-- Risk status --}}
+                                      </div>
+                                      {{-- Risk status --}}
                                       <div class="col-md-6">
                                         <label for="inputRisk" class="form-label">Risk</label>
                                         <select id="inputRisk" class="form-select" name="risk_status">

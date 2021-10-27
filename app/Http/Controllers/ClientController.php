@@ -24,7 +24,7 @@ class ClientController extends Controller
             'address' => 'nullable|max:100',
             'post_code' => 'nullable|max:50',
             'email' => 'nullable|email:rfc,dns|max:70',
-            'contact_number' => 'nullable|numeric|max:30',
+            'contact_number' => 'nullable|max:30',
             'status' => 'nullable',
             'risk_status' => 'nullable',
             'service' => 'nullable',
