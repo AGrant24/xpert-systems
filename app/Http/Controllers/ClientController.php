@@ -12,6 +12,11 @@ use Symfony\Component\HttpFoundation\RateLimiter\RequestRateLimiterInterface;
 class ClientController extends Controller
 {
     // display all clients
+    public function AllClient()
+    {
+        $clients = Client::latest()->paginate(5);
+        return view('client.index', compact('clients'));
+    }
 
     // add new client
     public function AddClient(Request $request)
@@ -24,7 +29,7 @@ class ClientController extends Controller
             'address' => 'nullable|max:100',
             'post_code' => 'nullable|max:50',
             'email' => 'nullable|email:rfc,dns|max:70',
-            'contact_number' => 'nullable|max:30',
+            'phone' => 'nullable|max:15',
             'status' => 'nullable',
             'risk_status' => 'nullable',
             'service' => 'nullable',
@@ -41,8 +46,8 @@ class ClientController extends Controller
             'address' => $request->address,
             'post_code' => $request->post_code,
             'email' => $request->email,
-            'contact_number' => $request->contact_number,
-            'status' => $request->status,
+            'phone' => $request->phone,
+            'status' => 'New',
             'risk_status' => $request->risk_status,
             'service' => $request->service,
             'invoiced' => $request->invoiced,

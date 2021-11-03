@@ -88,11 +88,11 @@
 
               </form>
             </div> 
-            {{-- <p class="mt-5 mb-3 text-muted">&copy; Alex Grant 2021 - All Rights Reserved</p> --}}
+            <p class="mt-5 mb-3 text-muted">&copy; Alex Grant 2021 - All Rights Reserved</p>
             </main>
-            <x-jet-button class="ml-4">
+            {{-- <x-jet-button class="ml-4">
               <a href="{{ route('register') }}">Register</a>
-          </x-jet-button>
+          </x-jet-button> --}}
              
             
 

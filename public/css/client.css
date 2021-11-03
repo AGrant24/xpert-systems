@@ -6,19 +6,22 @@
 
 #add-button{
     padding-left: 15px;
-    padding-right: 15px;
     padding-top: 10px;
+    padding-right: 15px;
     overflow: auto;
     width: 20%;
     height: 60px;
     text-align: center !important;
     justify-content: center !important;
     align-items: center !important;
+
+   
 }
 
 #add-button button{
     font-size: 0.7rem !important;
     text-align: center !important;
+    border: 1px solid #dee2e6;
 }
 
 #add-button button i{
@@ -132,6 +135,20 @@ width: 20%;
 
 
 /** Footer */
-  #clients-table tfoot > tr > td{
+#clients-table tfoot > tr > td{
       padding-right: 15px;
   }
+
+  /** Table content */
+#in_treatment {
+    font-style: italic;
+  }
+
+  /** Pagination */
+#pagination_container{
+    padding-right: 15px;
+    padding-bottom: 15px;
+}
+.pagination{
+    margin-bottom: 0;
+}

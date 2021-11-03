@@ -1,7 +1,10 @@
 <?php
 
-use App\Http\Controllers\ClientController;
 use Illuminate\Support\Facades\Route;
+
+use App\Http\Controllers\ClientController;
+
+use App\Models\Client;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,4 +25,6 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
-Route::post('/dashboard/addclient', [ClientController::class, 'AddClient'])->name('store.client');
+/** Client routes */
+Route::post('/client/addclient', [ClientController::class, 'AddClient'])->name('store.client');
+Route::get('/client/all', [ClientController::class, 'AllClient'])->name('all.client');
