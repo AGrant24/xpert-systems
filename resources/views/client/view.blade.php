@@ -1,0 +1,1 @@
+<h1>Client unique page for client {{ $clients->id }}</h1>

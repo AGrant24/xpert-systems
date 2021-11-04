@@ -154,7 +154,7 @@
                     <td>{{ $client->client_name }}</td>
                     <td>{{ $client->service }}</td>
                     <td>{{ $client->status }}</td>
-                    <td class="text-center"><button type="button" class="btn btn-light"><i class="fas fa-external-link-alt" id="view-button"></i></button>
+                    <td class="text-center"><a role="button" class="btn btn-light" href="{{ url('client/'.$client->id) }}"><i class="fas fa-external-link-alt" id="view-button"></i></a>
                     </tr>
                     @endforeach
                 </tbody>

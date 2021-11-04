@@ -56,4 +56,11 @@ class ClientController extends Controller
         /** Return to dashboard */
         return redirect()->back()->with('success', 'Client added Successfully');
     }
+
+    // View Client's unique page
+    public function ViewClient($id)
+    {
+        $clients = Client::find($id);
+        return view('client.view', compact('clients'));
+    }
 }
