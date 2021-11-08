@@ -66,5 +66,10 @@ class ClientController extends Controller
     }
 
     // go to edit Client's unique page
+    public function EditClient($id)
+    {
+        $clients = Client::find($id);
+        return view('client.edit', compact('clients'));
+    }
     // update clients record
 }
