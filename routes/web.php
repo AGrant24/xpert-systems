@@ -28,6 +28,6 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 /** Client routes */
 Route::post('/client/addclient', [ClientController::class, 'AddClient'])->name('store.client');
 Route::get('/client/all', [ClientController::class, 'AllClient'])->name('all.client');
-/** Client routes - unique page */
-Route::get('/client/{id}', [ClientController::class, 'ViewClient'])->name('view.client');
-// Client page update - pass $id
+// Client's unique page
+Route::get('/client/{id}', [ClientController::class, 'ViewClient'])->name('client.view');
+// Clients data update

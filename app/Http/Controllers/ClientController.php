@@ -53,6 +53,7 @@ class ClientController extends Controller
             'invoiced' => $request->invoiced,
         ]);
 
+
         /** Return to dashboard */
         return redirect()->back()->with('success', 'Client added Successfully');
     }
@@ -63,4 +64,7 @@ class ClientController extends Controller
         $clients = Client::find($id);
         return view('client.view', compact('clients'));
     }
+
+    // go to edit Client's unique page
+    // update clients record
 }

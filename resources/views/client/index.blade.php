@@ -6,16 +6,6 @@
         </h2>
     </x-slot>
 
-    {{-- <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                <x-jet-welcome />
-            </div>
-        </div>
-    </div> --}}
-
-
-
 {{-- Client list --}}
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
@@ -127,13 +117,14 @@
 
                 {{-- Alert Section --}}
                 {{-- uncomment the if statement once back end ready to link --}}
-                    @if(session('success'))
-                        <div class="alert alert-success alert-dismissible fade show" role="alert">
-                            <strong>{{ session('success') }}</strong> - Click here to view
-                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                        </div>
-                        @endif
-                {{-- Alert Section end--}}
+                @if(session('success'))
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>{{ session('success') }}</strong>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                @endif
+        {{-- Alert Section end--}}
+        
 
                 {{-- Client Table --}}
                 <table class="table align-middle table-borderless" id="clients-table">
