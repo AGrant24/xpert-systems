@@ -1,0 +1,26 @@
+#action-card {
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  border-color: white;
+  box-shadow: 2px 2px 8px #c0c0c08c;
+}
+
+#risk-status-bar {
+  margin-bottom: 2rem;
+}
+
+#info-card {
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    border-color: white;
+    box-shadow: 2px 2px 8px #c0c0c08c;
+    background-color: white; /** Needed because its not a card */
+}
+
+.info-card-header{
+    background-color: rgb(248, 248, 248);
+    height: 3rem;
+}
+
+
+

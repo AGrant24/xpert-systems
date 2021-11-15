@@ -37,7 +37,6 @@ class ClientController extends Controller
         ]);
 
         /** Validated now proceed */
-
         Client::insert([
             'user_id' => Auth::user()->id,
             'created_at' => Carbon::now(),
@@ -52,9 +51,6 @@ class ClientController extends Controller
             'service' => $request->service,
             'invoiced' => $request->invoiced,
         ]);
-
-
-        /** Return to dashboard */
         return redirect()->back()->with('success', 'Client added Successfully');
     }
 
