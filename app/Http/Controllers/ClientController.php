@@ -68,4 +68,13 @@ class ClientController extends Controller
         return view('client.edit', compact('clients'));
     }
     // update clients record
+    public function UpdateClient(Request $request, $id)
+    {
+        $clients = Client::find($id);
+        $update = Client::find($id)->update([
+            // Update this stuff
+            'client_name' => $request->client_name,
+        ]);
+        return Redirect()->to('client/' . $clients->id)->with('success', 'Client Information Updated!');
+    }
 }

@@ -30,3 +30,4 @@ Route::post('/client/addclient', [ClientController::class, 'AddClient'])->name('
 Route::get('/client/all', [ClientController::class, 'AllClient'])->name('all.client');
 Route::get('/client/{id}', [ClientController::class, 'ViewClient'])->name('client.view');
 Route::get('/client/edit/{id}', [ClientController::class, 'EditClient'])->name('client.edit');
+Route::post('/client/edit/{id}', [ClientController::class, 'UpdateClient'])->name('update.client');
