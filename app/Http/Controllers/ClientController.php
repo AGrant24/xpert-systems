@@ -70,10 +70,18 @@ class ClientController extends Controller
     // update clients record
     public function UpdateClient(Request $request, $id)
     {
+
         $clients = Client::find($id);
         $update = Client::find($id)->update([
             // Update this stuff
             'client_name' => $request->client_name,
+            'risk_status' => $request->risk_status,
+            'status' => $request->status,
+            'date_of_birth' => $request->date_of_birth,
+            'phone' => $request->phone,
+            'email' => $request->email,
+            'address' => $request->address,
+            'post_code' => $request->post_code,
         ]);
         return Redirect()->to('client/' . $clients->id)->with('success', 'Client Information Updated!');
     }

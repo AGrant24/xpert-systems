@@ -2,8 +2,6 @@
 <x-app-layout>
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-{{-- Back Button --}}
-
 {{-- Action card --}}
     <div class="row">
         <div class="col-sm-4">
@@ -31,13 +29,6 @@
     <div class="row">
         <div class="col-sm-4">
             <table class="table align-middle table-borderless" id="info-card">
-                <thead>
-                    <tr class="info-card-header align-middle">
-                    <th scope="col">Contact Information</th>
-                    <th scope="col"></th>
-                    </tr>
-                </thead>
-                
                 <tbody>
                     <tr class="client-row">
                     <th scope="row" class="client-spacing">Status:</th>
@@ -48,7 +39,7 @@
                     <td>{{ $clients->date_of_birth }}</td>
                     </tr>
                     <tr class="client-row">
-                    <th scope="row" class="client-spacing">Contact number:</th>
+                    <th scope="row" class="client-spacing">Phone:</th>
                     <td>{{ $clients->phone }}</td>
                     </tr>
                     <tr class="client-row">
