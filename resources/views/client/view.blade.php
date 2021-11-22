@@ -7,8 +7,8 @@
         <div class="col-sm-4">
             <div class="card" id="action-card">
               <div class="card-body">
-                <h1 class="card-title">{{ $clients->client_name }}</h1>
-                <p class="card-text">Client Reference: {{ str_pad($clients->id, 6, '0', STR_PAD_LEFT) }}</p>
+                <h2 class="card-title">{{ $clients->client_name }}</h2>
+                <p class="card-text">Client Reference: {{ str_pad($clients->id, 6, '0', STR_PAD_LEFT) }}<br>{{ $clients->service }}</p>
                   <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                     <a role="button" class="btn btn-primary" href="{{ url('client/edit/'.$clients->id) }}">Edit</a>
                   </div>

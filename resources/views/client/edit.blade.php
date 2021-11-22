@@ -22,7 +22,7 @@
                   <span class="input-group-text" id="basic-addon1">Name</span>
                   <input type="text" name="client_name" class="form-control"  aria-describedby="client name" value="{{ $clients->client_name }}">
                 </div>
-                <p class="card-text">Client Reference: {{ str_pad($clients->id, 6, '0', STR_PAD_LEFT) }}</p>
+                <p class="card-text">Client Reference: {{ str_pad($clients->id, 6, '0', STR_PAD_LEFT) }}<br>{{ $clients->service }}</p></p>
                 
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                             <button type="submit" class="btn btn-primary">Save</button>
