@@ -58,6 +58,8 @@ class ClientController extends Controller
     public function ViewClient($id)
     {
         $clients = Client::find($id);
+        // $appointments - Appointment::latest();
+        // make sure to compact appointments 
         return view('client.view', compact('clients'));
     }
 
@@ -65,6 +67,8 @@ class ClientController extends Controller
     public function EditClient($id)
     {
         $clients = Client::find($id);
+        // $appointments - Appointment::latest();
+        // make sure to compact appointments 
         return view('client.edit', compact('clients'));
     }
     // update clients record
