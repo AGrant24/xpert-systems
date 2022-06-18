@@ -1,3 +1,10 @@
+.notes{
+  /* white-space: pre-wrap; */
+  white-space: pre-line;
+}
+
+
+
 #action-card {
   margin-bottom: 2rem;
   border-radius: 10px;

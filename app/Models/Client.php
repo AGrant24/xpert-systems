@@ -29,4 +29,9 @@ class Client extends Model
     {
         return $this->hasOne(User::class, 'id', 'user_id');
     }
+    /** apps function 
+     * public function apps(){
+     * return $this->hasMany(Appointment::class);
+     * }
+     */
 }
