@@ -7,12 +7,17 @@ use Illuminate\Database\Eloquent\Model;
 
 class Appointment extends Model
 {
-    /** client function
-     Returns - hasOne id 
-     client::class id , client_id
-     
+    protected $fillable = [
+        'client_id',
+        'status',
+        'date',
+        'time',
+        'duration',
+        'invoiced',
+    ];
 
-    /** app function
-     * Returns belongsTo(Client::Class)
-     */
+    public function client()
+    {
+        return $this->belongsTo(Client::class);
+    }
 }
