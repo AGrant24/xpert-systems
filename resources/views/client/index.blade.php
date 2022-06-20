@@ -16,7 +16,7 @@
                     <div class="client-search">
                         <div class="row height d-flex justify-content-left align-items-left">
                             <div class="col-md-8">
-                                <div class="form"><i class="fa fa-search"></i><input type="text" class="form-control form-input" placeholder="Search for client"> <span class="left-pan"></span></div>
+                                {{-- <div class="form"><i class="fa fa-search"></i><input type="text" class="form-control form-input" placeholder="Search for client"> <span class="left-pan"></span></div> --}}
                             </div>
                         </div>
                     </div>

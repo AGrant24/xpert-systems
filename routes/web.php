@@ -22,9 +22,9 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::middleware(['auth:sanctum', 'verified'])->get('/client/all', function () {
+    return view('client.all');
+})->name('client.all');
 
 // Client
 Route::post('/client/addclient', [ClientController::class, 'AddClient'])->name('store.client');
