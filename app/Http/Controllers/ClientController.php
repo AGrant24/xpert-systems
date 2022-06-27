@@ -29,7 +29,7 @@ class ClientController extends Controller
             'address' => 'nullable|max:100',
             'post_code' => 'nullable|max:50',
             'email' => 'nullable|email:rfc,dns|max:70',
-            'phone' => 'nullable|max:15',
+            'phone' => 'nullable|numeric',
             'status' => 'nullable',
             'risk_status' => 'nullable',
             'service' => 'nullable',
@@ -75,8 +75,21 @@ class ClientController extends Controller
     public function UpdateClient(Request $request, $id)
     {
 
+        $request->validate([
+            'client_name' => 'required|max:100',
+            'date_of_birth' => 'nullable|date',
+            'address' => 'nullable|max:100',
+            'post_code' => 'nullable|max:50',
+            'email' => 'nullable|email:rfc,dns|max:70',
+            'phone' => 'nullable|numeric',
+            'status' => 'nullable',
+            'risk_status' => 'nullable',
+            'service' => 'nullable',
+        ]);
+
         $clients = Client::find($id);
         $update = Client::find($id)->update([
+
             // Update this stuff
             'client_name' => $request->client_name,
             'risk_status' => $request->risk_status,

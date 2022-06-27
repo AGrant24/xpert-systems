@@ -56,7 +56,15 @@
 
     {{--  info card --}}
     
-        
+    @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
             <table class="table align-middle table-borderless" id="info-card">
                 <tbody>
                     <tr class="client-row">
@@ -78,7 +86,7 @@
                     <tr class="client-row">
                       <th scope="row" class="client-spacing">Phone:</th>
                       <td><div class="input-group mb-3">
-                        <input type="text" name="phone" class="form-control"  aria-describedby="client's phone number" value="{{ $clients->phone }}">
+                        <input type="text" name="phone" class="form-control"  aria-describedby="client's phone number" value="{{ $clients->phone }}" novalidate>
                       </div></td>
                     </tr>
                     <tr class="client-row">

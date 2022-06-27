@@ -9,15 +9,6 @@ use App\Models\Client;
 class AppointmentController extends Controller
 {
 
-    private $appointment;
-    private $client;
-
-    public function __construct(Appointment $appointment, Client $client)
-    {
-        $this->appointment = $appointment;
-        $this->client = $client;
-    }
-
     /**
      * Display a listing of the resource.
      *
@@ -44,8 +35,9 @@ class AppointmentController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Appointment $appointment)
     {
+        $this->appointment = $appointment;
 
         $request->validate([
             'date' => 'required',

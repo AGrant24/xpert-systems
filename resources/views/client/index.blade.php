@@ -20,10 +20,14 @@
                             </div>
                         </div>
                     </div>
+
+                    
                     {{-- Add client Modal --}}
+
                     <div id="add-button">
                         {{-- <button type="button" class="btn btn-light">Add Client</button> --}}
                         {{-- Add Client Button --}}
+
                         
             <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><b>ADD CLIENT</b>
                 <i class="far fa-plus-square" id="add-client-button"></i>
@@ -35,44 +39,47 @@
                         <div class="modal-content">
                             <div class="modal-header">
                             <h5 class="modal-title" id="staticBackdropLabel">ADD NEW CLIENT</h5>
+                            
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
                                 {{-- New Client post --}}
 
+                                
                                 <form class="row g-3" action="{{ route('store.client') }}" method="POST">
+
                                     @csrf
                                     {{-- Name --}}
                                     <div class="col-md-6">
                                       <label for="inputName4" class="form-label">Name</label>
-                                      <input type="text" class="form-control" name="client_name" id="inputName4" required>
+                                      <input type="text" class="form-control" name="client_name" id="inputName4" value="{{ old('client_name') }}" required>
                                     </div>
                                     
                                     {{-- Date of birth --}}
                                     <div class="col-md-6">
                                       <label for="inputdob4" class="form-label">Date of birth</label>
-                                      <input type="date" class="form-control" name="date_of_birth" id="inputDob4">
+                                      <input type="date" class="form-control" name="date_of_birth" id="inputDob4" value="{{ old('date_of_birth') }}">
                                     </div>
                                     <div class="col-md-6">
                                         {{-- email --}}
                                       <label for="inputEmail4" class="form-label">Email</label>
-                                      <input type="email" class="form-control" name="email" id="inputEmail4">
+                                      <input type="email" class="form-control" name="email" id="inputEmail4" value="{{ old('email') }}">
                                     </div>
                                    
                                         {{-- Phone number --}}
                                     <div class="col-md-6">
                                       <label for="inputContact4" class="form-label">Contact Number</label>
-                                      <input type="text" class="form-control" name="phone" id="inputContact4">
+                                      <input type="text" class="form-control" name="phone" id="inputContact4" value="{{ old('phone') }}">
                                     </div>
                                     {{-- Address --}}
                                     <div class="col-8">
                                       <label for="inputAddress" class="form-label">First Line of Address</label>
-                                      <input type="text" class="form-control" name="address" id="inputAddress" placeholder="">
+                                      <input type="text" class="form-control" name="address" id="inputAddress" placeholder="" value="{{ old('address') }}">
                                     </div>
                                     {{-- Post code --}}
                                     <div class="col-4">
                                       <label for="inputPost" class="form-label">Post Code</label>
-                                      <input type="text" class="form-control" name="post_code" id="inputPost" placeholder="">
+                                      <input type="text" class="form-control" name="post_code" id="inputPost" placeholder="" value="{{ old('post_code') }}">
                                     </div>
                                     {{-- Service --}}
                                     <div class="col-md-6">
@@ -123,6 +130,15 @@
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
                 @endif
+                @if ($errors->any())
+                    <div class="alert alert-danger alert-dismissible fade show">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li><strong>{{ $error }}</strong></li>
+                            @endforeach
+                        </ul>
+                    </div>
+                    @endif
         {{-- Alert Section end--}}
         
 
