@@ -6,14 +6,17 @@ use Illuminate\Http\Request;
 use App\Models\Client;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Carbon;
-use Illuminate\Support\Facades\Redirect;
-use Symfony\Component\HttpFoundation\RateLimiter\RequestRateLimiterInterface;
+use Laravel\Scout\Searchable;
 
 class ClientController extends Controller
 {
+
+    use Searchable;
+
     // display all clients
     public function AllClient()
     {
+
         $clients = Client::latest()->paginate(5);
         return view('client.index', compact('clients'));
     }

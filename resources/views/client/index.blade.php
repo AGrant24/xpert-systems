@@ -16,7 +16,12 @@
                     <div class="client-search">
                         <div class="row height d-flex justify-content-left align-items-left">
                             <div class="col-md-8">
-                                {{-- <div class="form"><i class="fa fa-search"></i><input type="text" class="form-control form-input" placeholder="Search for client"> <span class="left-pan"></span></div> --}}
+                                
+{{-- Search bar --}}
+<div class="form"><i class="fa fa-search"></i><input type="text" class="form-control form-input" placeholder="Search for client"> <span class="left-pan"></span>
+</div>
+ {{-- Search bar end --}}
+
                             </div>
                         </div>
                     </div>
@@ -155,6 +160,7 @@
                 </thead>
                 {{-- Body content for clients table --}}
                 @foreach($clients as $client)
+                
                 <tbody>
                     <tr class="client-row">
                     <th scope="row" class="client-spacing">{{ str_pad($client->id, 6, '0', STR_PAD_LEFT) }}</th>

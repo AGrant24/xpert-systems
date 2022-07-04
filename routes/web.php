@@ -32,6 +32,5 @@ Route::get('/client/all', [ClientController::class, 'AllClient'])->name('all.cli
 Route::get('/client/{id}', [ClientController::class, 'ViewClient'])->name('client.view');
 Route::get('/client/edit/{id}', [ClientController::class, 'EditClient'])->name('client.edit');
 Route::post('/client/edit/{id}', [ClientController::class, 'UpdateClient'])->name('update.client');
-
 // Appointments
 Route::resource('appointment', AppointmentController::class);
