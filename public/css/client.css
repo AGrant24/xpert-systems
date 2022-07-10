@@ -34,6 +34,13 @@
 
 
 /** Search */
+
+#search-button{
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-right: 15px;
+}
+
 .client-search{
     padding-left: 15px;
     padding-bottom: 15px;

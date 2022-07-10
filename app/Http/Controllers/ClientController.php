@@ -14,10 +14,13 @@ class ClientController extends Controller
     use Searchable;
 
     // display all clients
-    public function AllClient()
+    public function AllClient(Request $request)
     {
-
-        $clients = Client::latest()->paginate(5);
+        if ($request->has('search')) {
+            $clients = Client::where('client_name', 'like', '%' . $request->get('search') . '%')->orWhere('id', $request->get('search'))->paginate(20);
+        } else {
+            $clients = Client::latest()->paginate(5);
+        }
         return view('client.index', compact('clients'));
     }
 

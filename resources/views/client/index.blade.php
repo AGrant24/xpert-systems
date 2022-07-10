@@ -14,23 +14,30 @@
                 {{-- Top section --}}
                 <div id="top-section">
                     <div class="client-search">
-                        <div class="row height d-flex justify-content-left align-items-left">
-                            <div class="col-md-8">
-                                
-{{-- Search bar --}}
-<div class="form"><i class="fa fa-search"></i><input type="text" class="form-control form-input" placeholder="Search for client"> <span class="left-pan"></span>
-</div>
- {{-- Search bar end --}}
-
+                        <form action="/client/all" method="get">
+                            <div class="row height d-flex justify-content-left align-items-left">
+                                <div class="col-md-8">
+                                    <div class="form">
+                                        <i class="fa fa-search"></i>
+                                        <input type="text" name="search" value="{{ (request()->has('search')) ? request()->get('search') : '' }}" class="form-control form-input" placeholder="Search for client"> 
+                                        <span class="left-pan"></span>
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-md-4" id="search-button">
+                                    <button type="submit" class="btn btn-primary">
+                                        Search
+                                    </button>
+                                </div>
                             </div>
-                        </div>
+                            </form>
                     </div>
 
                     
                     {{-- Add client Modal --}}
 
                     <div id="add-button">
-                        {{-- <button type="button" class="btn btn-light">Add Client</button> --}}
+                        
                         {{-- Add Client Button --}}
 
                         
@@ -128,7 +135,6 @@
                 {{-- end Top section --}}
 
                 {{-- Alert Section --}}
-                {{-- uncomment the if statement once back end ready to link --}}
                 @if(session('success'))
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
                     <strong>{{ session('success') }}</strong>
