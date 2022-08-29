@@ -1,4 +1,4 @@
-![Logo]()
+![Logo](https://raw.githubusercontent.com/AGrant24/xpert-systems/master/public/img/githublogo.PNG)
 # Xpert Systems
 
 Xpert System is a patient management system for counsellers, CBT Practitioners and other professionals who need to manage a caseload of clients.
