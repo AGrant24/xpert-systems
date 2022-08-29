@@ -1,4 +1,4 @@
-
+![Logo]()
 # Xpert Systems
 
 Xpert System is a patient management system for counsellers, CBT Practitioners and other professionals who need to manage a caseload of clients.
@@ -23,7 +23,7 @@ An client management system for SME's. While adaptable to multiple industries, t
 ## Installation
 
 ```bash
-  composer Install
+  composer install
   # Setup your .env file to match your desired database
   php artisan key:generate
   # Run migration 
